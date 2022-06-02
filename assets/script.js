@@ -46,9 +46,17 @@ for(var x=0; x< 9; x++){
     }
 }
 
+// Pulls from local storage and sets the saved schedule to the correct time text box
 nineInput.value= localStorage.getItem("nine");
 tenInput.value = localStorage.getItem('ten');
-elevenInput
+elevenInput.value = localStorage.getItem('eleven');
+twelveInput.value = localStorage.getItem('twelve');
+oneInput.value = localStorage.getItem('one');
+twoInput.value = localStorage.getItem('two');
+threeInput.value = localStorage.getItem('three');
+fourInput.value = localStorage.getItem('four');
+fiveInput.value = localStorage.getItem('five');
+
 
 
 // All functions for adding schedule to local storage
