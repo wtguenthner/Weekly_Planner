@@ -1,5 +1,5 @@
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+var days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 var date = document.getElementById('currentDay')
 var nineInput = document.getElementById('nineInput')
 var tenInput = document.getElementById('tenInput')
@@ -12,8 +12,11 @@ var fourInput = document.getElementById('fourInput')
 var fiveInput = document.getElementById('fiveInput')
 
 var change = document.getElementsByName('textField');
-// Sets date and places it in an object
+
+// Generates date/time
 var myDate = new Date();
+
+//Object created for each aspect of the date that is needed
 const parts = {
         date: myDate.getDate(),
         day: myDate.getDay(),
@@ -21,14 +24,18 @@ const parts = {
         year: myDate.getFullYear(),
         hour: myDate.getHours(),
     };
+
+//Sets a variable to the hour of the day for future use
 var hours = parts.hour;
 
 //Displays date
 date.innerHTML = "Today is: " + days[`${parts.day}`] + " " + months[`${parts.month}`] + ' ' + parts.date + ", " + parts.year ;
 
+//Checks the hour of the day and compares it to the value of each row.
+// Changes class based on the relationship between the hour and value
 for(var x=0; x< 9; x++){
     var value = change[x].getAttribute("value");
-    if(hours>value){
+    if(hours > value){
         change[x].className = "past";
     }
     if(hours == value){
@@ -39,9 +46,43 @@ for(var x=0; x< 9; x++){
     }
 }
 
+nineInput.value= localStorage.getItem("nine");
+tenInput.value = localStorage.getItem('ten');
+elevenInput
 
 
-// change[x].className = "present";
-// var value = change[2].getAttribute("value");
-// console.log(value)
-// console.log(hours)
+// All functions for adding schedule to local storage
+function nine(){
+    localStorage.setItem("nine", nineInput.value)
+}
+function ten(){
+    localStorage.setItem("ten", tenInput.value)
+}
+function eleven(){
+    localStorage.setItem("eleven", elevenInput.value)
+}
+function twelve(){
+    localStorage.setItem("twelve", twelveInput.value)
+
+}
+function one(){
+    localStorage.setItem("one", oneInput.value)
+
+}
+function two(){
+    localStorage.setItem("two", twoInput.value)
+
+}
+function three(){
+    localStorage.setItem("three", threeInput.value)
+
+}
+function four(){
+    localStorage.setItem("four", fourInput.value)
+
+}
+function five(){
+    localStorage.setItem("five", fiveInput.value)
+
+}
+

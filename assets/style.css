@@ -43,7 +43,8 @@ textarea{
   color: #000000;
   border-top: 1px dashed #000000;
   width:10%;
-  /* padding: 10px; */
+  text-align: center;
+  
 }
 
 .past {
@@ -71,7 +72,8 @@ textarea{
   background-color: #06AED5;
   color: white;
   width:9%;
-  /* padding:10px; */
+  text-align: center;
+ 
 }
 
 .saveBtn i:hover {
@@ -83,10 +85,6 @@ textarea{
   border-style: solid;
   border-radius: 15px;
   padding: 50px;
-}
-
-#planner{
-  margin-left: 25px;
 }
 
 tr:hover{
